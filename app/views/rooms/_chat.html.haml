@@ -1,0 +1,10 @@
+#chat{data: {subscribe: subscribe_path}}
+  .panel.panel-default
+    .panel-body
+      %table
+        %tbody{v: {repeat: 'm : messages'}}
+          %tr
+            %td{width: '80px; text-align: right; margin-right: 8px;'}
+              %b {{m.name}}
+            %td
+              {{m.content}}

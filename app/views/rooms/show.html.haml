@@ -1,6 +1,5 @@
 = form_for Message.new, url: room_messages_path(params[:id]), remote: true, id: 'new_message' do |f|
-  = f.text_field :name, placeholder: 'Name'
-  = f.text_field :content
-  = f.submit
+  .form-group
+    = f.text_field :content, class: 'form-control', placeholder: 'Type your message'
 
-%ul#messages{data: {subscribe: room_subscribe_path(params[:id])}}
+= render 'chat', subscribe_path: room_subscribe_path(params[:id])

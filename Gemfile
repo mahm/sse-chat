@@ -24,3 +24,7 @@ group :development, :test do
   gem 'quiet_assets'
 end
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-vue'
+  gem 'rails-assets-underscore'
+end
